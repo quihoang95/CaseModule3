@@ -10,9 +10,9 @@
                             <div class="row">
                                 <div class="col-12 col-md-6"></div>
                                 <div class="col-12 col-md-6" style="text-align: right">
-{{--                                    @if(\Illuminate\Support\Facades\Auth::user()->role_id == 1)--}}
+                                    @if(\Illuminate\Support\Facades\Auth::user()->role_id == 1)
                                     <a href="{{route('users.create')}}" class="btn btn-success">+Thêm mới</a>
-{{--                                    @endif--}}
+                                    @endif
                                 </div>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                                         </td>
                                         <td>
                                             <div>
-{{--                                            @if(\Illuminate\Support\Facades\Auth::user()->role_id == \App\Models\RoleConstants::ROLE_ADMIN)--}}
+                                            @if(\Illuminate\Support\Facades\Auth::user()->role_id == \App\Models\RoleConstants::ROLE_ADMIN)
                                                 <!-- EDIT -->
                                                 <a data-placement="top" href="{{route('users.edit',$user->id)}}">
                                                     <i class="nav-icon fas fa-edit"></i>Sửa</a>
@@ -65,9 +65,9 @@
                                                    onclick="return confirm('Bạn chắc chắn muốn xoá lớp học này?')"
                                                    data-placement="top" href="{{route('users.destroy',$user->id)}}">
                                                     <i class="nav-icon far fa-trash-alt"></i>Xóa</a>
-{{--                                                @else--}}
-{{--                                                    Chỉ Quản lí có quyền--}}
-{{--                                                @endif--}}
+                                                @else
+                                                    Chỉ Quản lí có quyền
+                                                @endif
                                             </div>
                                         </td>
                                 </tr>

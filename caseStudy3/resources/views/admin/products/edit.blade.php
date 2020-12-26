@@ -5,8 +5,8 @@
         <form action="{{route('products.update',$product->id)}}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="card card-primary">
+                <div class="col-12 col-md-12">
+                    <div class="card card-primary" style="width: 100%">
                         <div class="card-header">
                             <h3 class="card-title">Thông tin</h3>
                             <div class="card-tools">
@@ -49,20 +49,20 @@
                             <div class="form-group">
                                 <label for="inputName">Ảnh2</label>
                                 <input type="file" accept=".png, .jpg, .jpeg" name="image1" id="inputName"
-                                       class="form-control" value="{{$product->image1}}>
+                                       class="form-control" value="{{$product->image1}}">
                                 @error('name')
-                                <div style="color: red">{{$message}}</div>
+                                <div>{{$message}}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
                                 <label for="inputName">Ảnh 3</label>
                                 <input type="file" accept=".png, .jpg, .jpeg" name="image2" id="inputName"
-                                       class="form-control" value="{{$product->image2}}>
+                                       class="form-control" value="{{$product->image2}}">
                                 @error('name')
-                                <div style="color: red">{{$message}}</div>
+                                <div>{{$message}}></div>
                                 @enderror
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" style="color:#000;">
                                 <label for="inputName">Giá</label>
                                 <input value="{{$product->priceEach}}" type="text" name="priceEach"
                                        id="inputName" placeholder="Nhập giá" class="form-control">

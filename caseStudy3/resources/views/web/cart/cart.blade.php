@@ -65,7 +65,7 @@
     <div class="container">
         <div class="row">
             @if(isset($cart))
-
+                @if($cart->totalQty != 0)
                 <div class="col-lg-8 col-md-7 col-sm-6 d-block">
                     <div class="order-product-list">
                         <span class="the-title width-full  float-left d-block mb-2 font-bold">Sản phẩm</span>
@@ -178,6 +178,10 @@
                                     <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
+                                <div class="form-group comment">
+                                    <input class="form-control border-radius" type="text" name="comment"
+                                           placeholder="Ghi chú">
+                                </div>
                                 <button type="submit" class="payment_sub text-white text-center mt-1 d-block mb-3"
                                         style="width: 100%;  border-radius:26px;height: 45px; font-size: 20px">
                                     ĐẶT HÀNG
@@ -209,7 +213,14 @@
                         </div>
                     </div>
                 </div>
-            @else()
+                @else()
+                    <img style="width: 50%;margin: auto" src="https://www.mkdiamondsnyc.com/assets/images/empty-cart.png">
+                    <a href="{{route('index.home')}}" style="width: 100%; color:#fff; margin-bottom: 20px"
+                       class="btn btn-primary">
+                        Tiếp tục mua sắm
+                    </a>
+                @endif
+                @else()
                 <img style="width: 50%;margin: auto" src="https://www.mkdiamondsnyc.com/assets/images/empty-cart.png">
                 <a href="{{route('index.home')}}" style="width: 100%; color:#fff; margin-bottom: 20px"
                    class="btn btn-primary">

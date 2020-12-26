@@ -46,37 +46,37 @@
                                style="margin-left: 12px;margin-right: 10px;border-bottom: 1px solid #fff;height: 29px">Tất cả sản phẩm</a>
                         </li>
                         <li class="menu-1 has-submenu">
-                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="#" title="Thời trang bé gái"
+                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="{{route('index.category',1)}}" title="Thời trang bé gái"
                                style="margin-left: 12px;margin-right: 10px;border-bottom: 1px solid #fff;height: 29px">Thời
                                 trang bé gái</a>
                         </li>
                         <li class="menu-1 has-submenu">
-                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="#" title="Thời trang bé trai"
+                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="{{route('index.category',2)}}" title="Thời trang bé trai"
                                style="margin-left: 12px;margin-right: 10px;border-bottom: 1px solid #fff;height: 29px">Thời
                                 trang bé trai</a>
                         </li>
                         <li class="menu-1 has-submenu">
-                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="#" title="Sữa bột công thức"
+                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="{{route('index.category',3)}}" title="Sữa bột công thức"
                                style="margin-left: 12px;margin-right: 10px;border-bottom: 1px solid #fff;height: 29px">Sữa
                                 bột công thức</a>
                         </li>
                         <li class="menu-1 has-submenu">
-                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="#" title="Bĩm tả"
+                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="{{route('index.category',4)}}" title="Bĩm tả"
                                style="margin-left: 12px;margin-right: 10px;border-bottom: 1px solid #fff;height: 29px">Bĩm
                                 tả</a>
                         </li>
                         <li class="menu-1 has-submenu">
-                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="#" title="Bình sữa bé bú"
+                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="{{route('index.category',5)}}" title="Bình sữa bé bú"
                                style="margin-left: 12px;margin-right: 10px;border-bottom: 1px solid #fff;height: 29px">Bình
                                 sữa bé bú</a>
                         </li>
                         <li class="menu-1 has-submenu">
-                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="#" title="Bột, bánh ăn dặm"
+                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="{{route('index.category',6)}}" title="Bột, bánh ăn dặm"
                                style="margin-left: 12px;margin-right: 10px;border-bottom: 1px solid #fff;height: 29px">Bột,
                                 bánh ăn dặm</a>
                         </li>
                         <li class="menu-1 has-submenu">
-                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="#" title="Bánh kẹo dinh dưỡng"
+                            <a class="pl-0 pr-3 font-medium font-14 border-bottom" href="{{route('index.category',7)}}" title="Bánh kẹo dinh dưỡng"
                                style="margin-left: 12px;margin-right: 10px;border-bottom: 1px solid #fff;height: 29px">Bánh
                                 kẹo dinh dưỡng</a>
                         </li>

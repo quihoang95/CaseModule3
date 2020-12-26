@@ -32,5 +32,33 @@ class OrderController extends Controller
 
         return view('admin.orders.orderDetail',compact('orders','customers','products'));
     }
+    public function destroy($id)
+    {
+        $order = $this->orderService->findById($id);
+        $order->delete();
+        $message = 'Xóa đơn hàng thành công';
+        return redirect()->route('orders.index')->with('success',$message);
+    }
+
+    public function confirm($id)
+    {
+        $order = $this->orderService->findById($id);
+        if($order ->status == 1) {
+            $order->status = 2;
+            $order->save();
+            foreach ($order ->products as $item){
+                $product = Product::find($item->id);
+                $product->stock -= $item->pivot->quantity;
+
+                $product->save();
+            }
+
+            $message = 'Xác nhận đơn hàng thành công';
+            return redirect()->route('orders.index')->with('success',$message);
+        }else {
+            $message = 'Đơn hàng đã được xác nhận';
+            return redirect()->route('orders.index')->with('info',$message);
+        }
+    }
 
 }

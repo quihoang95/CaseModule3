@@ -423,19 +423,19 @@ a:hover {
     margin: 0;
 }
 
-.main-menu li.has-submenu:hover > a {
-    background-image: url("https://concung.com/themes/desktop4.1/img/ic-list-active.svg");
-}
+/*.main-menu li.has-submenu:hover > a {*/
+/*    background-image: url("https://concung.com/themes/desktop4.1/img/ic-list-active.svg");*/
+/*}*/
 
 .main-menu li.menu-1:hover > a {
     border-bottom: 1px solid #ee3e80 !important;
 }
 
-.main-menu li.has-submenu > a {
-    background-image: url("https://concung.com/themes/desktop4.1/img/ic-list.svg");
-    background-repeat: no-repeat;
-    background-position: right 0 center;
-}
+/*.main-menu li.has-submenu > a {*/
+/*    background-image: url("https://concung.com/themes/desktop4.1/img/ic-list.svg");*/
+/*    background-repeat: no-repeat;*/
+/*    background-position: right 0 center;*/
+/*}*/
 
 .main-menu a {
     color: #333;
@@ -1003,6 +1003,7 @@ small {
     .container {
         max-width: 960px;
     }
+
 }
 
 @media only screen and(min-width: 768px) {
@@ -1019,4 +1020,20 @@ small {
     .container {
         max-width: 540px;
     }
+}
+@media screen and (max-width: 890px){
+    .top-bar{
+        display: none;
+    }
+}
+@media screen and (max-width: 720px){
+    .search-box input[type=text]{
+        width: 130px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+    .search-box input[type=text]{
+        width: 100%;
+    }
+
 }

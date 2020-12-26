@@ -37,7 +37,6 @@ Route::middleware(['auth', 'checkAccountActive'])->prefix('admin')->group(functi
         Route::post('/create', [UserController::class, 'store'])->name('users.store');
         Route::get('{id}/edit', [UserController::class, 'edit'])->name('users.edit');
         Route::post('{id}/edit', [UserController::class, 'update'])->name('users.update');
-        Route::get('{id}/change-status', [UserController::class, 'changeStatus'])->name('users.changeStatus');
         Route::get('{id}/destroy', [UserController::class, 'destroy'])->name('users.destroy');
     });
     Route::prefix('categories')->group(function () {
@@ -70,6 +69,8 @@ Route::middleware(['auth', 'checkAccountActive'])->prefix('admin')->group(functi
     Route::prefix('orders')->group(function (){
         Route::get('/',[OrderController::class,'index'])->name('orders.index');
         Route::get('{id}/detail',[OrderController::class,'orderdetail'])->name('orders.order_detail');
+        Route::get('{id}/delete',[OrderController::class,'destroy'])->name('orders.delete');
+        Route::get('{id}/confirm',[OrderController::class,'confirm'])->name('orders.confirm');
     });
 
 });

@@ -6,11 +6,13 @@
                     <div class="widget">
                         <h5 class="widget-title">VỀ FONE'S KIDSHOP</h5>
                         <div class="link-list">
+                            <ul>
                             <li><a href="#">Giới thiệu về Fone's kidshop</a></li>
                             <li><a href="#">Tuyển dụng khối văn phòng</a></li>
                             <li><a href="#">Tuyển dụng khối siêu thị</a></li>
                             <li><a href="#">Chính sách bảo mật</a></li>
                             <li><a href="#">Điều khoản sử dụng</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -29,11 +31,13 @@
                             </div>
                             <div class="col-md-5 ml-0 pr-0 pl-0">
                                 <div class="link-list">
+                                    <ul>
                                     <li><a href="#">Tra cứu hóa đơn</a></li>
                                     <li><a href="#">Mua & giao nhận Online</a></li>
                                     <li><a href="#">Qui định & hình thức thanh toán</a></li>
                                     <li><a href="#">Bảo hành và bảo trì</a></li>
                                     <li><a href="#">Đổi trả & hoàn tiền</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -199,9 +203,7 @@
 </footer>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -210,13 +212,16 @@
         crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{{--Toastr--}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"
+        integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
 <script>
     toastr.options = {
         "closeButton": true,
         "debug": false,
         "newestOnTop": false,
         "progressBar": true,
-        "positionClass": "toast-top-center",
+        "positionClass": "toast-bottom-center",
         "preventDuplicates": false,
         "onclick": null,
         "showDuration": "500",

@@ -2,14 +2,14 @@
 namespace App\Http\Services;
 
 
-use App\Http\Repositories\ProductRepositoy;
+use App\Http\Repositories\ProductRepository;
 use App\Models\Product;
 
 class ProductService implements ServiceInterface
 {
 
     protected $productRepository;
-    public function __construct(ProductRepositoy $productRepository)
+    public function __construct(ProductRepository $productRepository)
     {
         $this->productRepository = $productRepository;
     }

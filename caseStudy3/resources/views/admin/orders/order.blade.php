@@ -19,6 +19,7 @@
                                     <th>ID Đơn hàng</th>
                                     <th>Khách hàng</th>
                                     <th>Ngày đặt hàng</th>
+                                    <th>Trạng thái</th>
                                     <th>Tùy chọn</th>
                                 </tr>
                                 </thead>
@@ -29,6 +30,13 @@
                                         <td>{{$order->id}}</td>
                                         <td>{{$order->customer->name}}</td>
                                         <td>{{$order->created_at}}</td>
+                                        <td>
+                                            @if($order->status == 1)
+                                                <span style="background-color: #C1AB1E; border-radius: 15px; color: #fff0f0; padding: 5px">Chưa xác nhận</span>
+                                            @else
+                                                <span style="background-color: #45C188; border-radius: 15px; color: #fff0f0; padding: 5px">Đã xác nhận</span>
+                                            @endif
+                                        </td>
                                         <td><a href="{{route('orders.order_detail',$order->id)}}" class="btn btn-primary">Chi tiết</a></td>
                                 </tr>
                                 @empty

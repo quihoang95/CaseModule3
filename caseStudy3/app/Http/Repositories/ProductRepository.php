@@ -4,7 +4,7 @@ namespace App\Http\Repositories;
 
 use App\Models\Product;
 
-class ProductRepositoy implements RepositoryInterface
+class ProductRepository implements RepositoryInterface
 {
 
     protected $productModel;

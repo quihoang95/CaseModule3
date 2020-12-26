@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-12 col-md-12">
                     <div class="card">
-                        <div class="card card-primary" style="width: 50%">
+                        <div class="card card-success" style="width: 100%">
                             <div class="card-header">
                                 <h3 class="card-title">Thông tin khách hàng</h3>
                                 <div class="card-tools">
@@ -21,6 +21,7 @@
                                         <p>Số điện thoại: {{$order->customer->phoneNumber}}</p>
                                         <p>Địa chỉ: {{$order->customer->address}}</p>
                                         <p>Email: {{$order->customer->email}}</p>
+                                        <p>Ghi chú: {{$order->comment}}</p>
                                     @endforeach
                                 </div>
                             </div>
@@ -55,6 +56,10 @@
                                 @endforelse
                                 </tbody>
                             </table>
+                            <a style="float: left" href="{{route('orders.confirm', $order->id)}}"
+                               class="btn btn-primary" onclick="return confirm('Bạn có muốn xác nhận đơn hàng này?')">Xác nhận</a>
+                            <a style="float: right" href="{{route('orders.delete', $product->pivot->orders_id)}}"
+                               class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa đơn hàng này?')">Xóa</a>
                         </div>
                         <!-- /.card-body -->
                     </div>

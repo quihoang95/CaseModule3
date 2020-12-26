@@ -5,8 +5,8 @@
         <form method="post" enctype="multipart/form-data">
             @csrf
             <div class="row">
-                <div class="col-12 col-md-6">
-                    <div class="card card-primary">
+                <div class="col-12 col-md-12">
+                    <div class="card card-primary" style="width: 100%">
                         <div class="card-header">
                             <h3 class="card-title">Thông tin</h3>
                             <div class="card-tools">
@@ -28,7 +28,7 @@
                                 <label for="inputName">Miêu tả</label>
                                 <textarea type="text" name="description" id="ckeditor"
                                           class="form-control ckeditor"></textarea>
-                                @error('desciption')
+                                @error('description')
                                 <div style="color: red">{{ $message }}</div>
                                 @enderror
                             </div>

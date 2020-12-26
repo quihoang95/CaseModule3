@@ -19,7 +19,7 @@ class CartController extends Controller
         $cart = new Cart($oldCart);
         $cart->add($product);
         session()->put('cart',$cart);
-        return back()->with('successAddToCart','Thêm thành công');
+        return back()->with('success','Thêm thành công');
     }
     public function  minusToCar($id)
     {
@@ -46,7 +46,7 @@ class CartController extends Controller
         $cart = new Cart($oldCart);
         $cart->remove($product);
         session()->put('cart',$cart);
-        $message = 'Xoa san pham thanh cong';
+        $message = 'Xóa sản phẩm thành công';
         return back()->with('success',$message);
     }
     public function checkout(CartRequest $request)
@@ -60,6 +60,8 @@ class CartController extends Controller
 
         $order = new Order();
         $order->customer_id = $customer->id;
+        $order->comment = $request->input('comment');
+        $order->status = 1;
         $order->save();
         $orders_id = $order->id;
 
